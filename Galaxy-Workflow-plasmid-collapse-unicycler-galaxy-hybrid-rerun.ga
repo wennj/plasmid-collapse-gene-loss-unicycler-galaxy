@@ -1,0 +1,532 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "plasmid-collapse-unicycler-galaxy-hybrid-rerun",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "modified best SPAdes graph"
+                }
+            ],
+            "label": "modified best SPAdes graph",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 235.1999969482422,
+                "height": 82.19999694824219,
+                "left": 318,
+                "right": 518,
+                "top": 153,
+                "width": 200,
+                "x": 318,
+                "y": 153
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "4907dfe5-72a3-4be2-8962-d28abb31af83",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "05d2f969-26ae-48e3-8d08-4af2bdd07cdb"
+                }
+            ]
+        },
+        "1": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 1,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Illumina paired reads 1 (forward)"
+                }
+            ],
+            "label": "Illumina paired reads 1 (forward)",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 340.1999969482422,
+                "height": 82.19999694824219,
+                "left": 316,
+                "right": 516,
+                "top": 258,
+                "width": 200,
+                "x": 316,
+                "y": 258
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "7108822e-a7d8-457b-8dcf-84018ea78848",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "0b950b1d-0392-4fe7-a841-1048a4065258"
+                }
+            ]
+        },
+        "2": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 2,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Illumina paired reads 2 (reverse)"
+                }
+            ],
+            "label": "Illumina paired reads 2 (reverse)",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 435.1999969482422,
+                "height": 82.19999694824219,
+                "left": 316,
+                "right": 516,
+                "top": 353,
+                "width": 200,
+                "x": 316,
+                "y": 353
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "e86e7fd7-8bc6-47a8-b602-df2dd380adfd",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "67f1e64f-625c-424a-9584-6e7c746cf254"
+                }
+            ]
+        },
+        "3": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 3,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Nanopore reads (quality and length filtered)"
+                }
+            ],
+            "label": "Nanopore reads (quality and length filtered)",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 554.1999969482422,
+                "height": 82.19999694824219,
+                "left": 319,
+                "right": 519,
+                "top": 472,
+                "width": 200,
+                "x": 319,
+                "y": 472
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "89148e7b-0151-41e5-a4d8-2d14aa85c211",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "dfde226c-f723-443a-bfaa-df72186eaf6c"
+                }
+            ]
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/unicycler/unicycler/0.4.8.0",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "RERUN|mod_graph1": {
+                    "id": 0,
+                    "output_name": "output"
+                },
+                "long": {
+                    "id": 3,
+                    "output_name": "output"
+                },
+                "paired_unpaired|fastq_input1": {
+                    "id": 1,
+                    "output_name": "output"
+                },
+                "paired_unpaired|fastq_input2": {
+                    "id": 2,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Create assemblies with Unicycler",
+                    "name": "RERUN"
+                },
+                {
+                    "description": "runtime parameter for tool Create assemblies with Unicycler",
+                    "name": "long"
+                },
+                {
+                    "description": "runtime parameter for tool Create assemblies with Unicycler",
+                    "name": "lr_align"
+                },
+                {
+                    "description": "runtime parameter for tool Create assemblies with Unicycler",
+                    "name": "paired_unpaired"
+                },
+                {
+                    "description": "runtime parameter for tool Create assemblies with Unicycler",
+                    "name": "paired_unpaired"
+                },
+                {
+                    "description": "runtime parameter for tool Create assemblies with Unicycler",
+                    "name": "rotation"
+                }
+            ],
+            "label": null,
+            "name": "Create assemblies with Unicycler",
+            "outputs": [
+                {
+                    "name": "assembly_graph",
+                    "type": "gfa1"
+                },
+                {
+                    "name": "assembly",
+                    "type": "fasta"
+                },
+                {
+                    "name": "best_spades_graph",
+                    "type": "gfa1"
+                }
+            ],
+            "position": {
+                "bottom": 774.9000244140625,
+                "height": 632.4000244140625,
+                "left": 667.5,
+                "right": 867.5,
+                "top": 142.5,
+                "width": 200,
+                "x": 667.5,
+                "y": 142.5
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/unicycler/unicycler/0.4.8.0",
+            "tool_shed_repository": {
+                "changeset_revision": "9e3e80cc4ad4",
+                "name": "unicycler",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"RERUN\": {\"rerun_selector\": \"yes\", \"__current_case__\": 0, \"mod_graph1\": {\"__class__\": \"RuntimeValue\"}}, \"graph_clean\": {\"min_component_size\": \"1000\", \"min_dead_end_size\": \"1000\"}, \"linear_seqs\": \"0\", \"long\": {\"__class__\": \"RuntimeValue\"}, \"lr_align\": {\"contamination\": {\"__class__\": \"RuntimeValue\"}, \"scores\": \"3,-6,-5,-2\", \"low_score\": null}, \"min_anchor_seg_len\": null, \"min_fasta_length\": \"100\", \"mode\": \"normal\", \"paired_unpaired\": {\"fastq_input_selector\": \"paired\", \"__current_case__\": 0, \"fastq_input1\": {\"__class__\": \"RuntimeValue\"}, \"fastq_input2\": {\"__class__\": \"RuntimeValue\"}}, \"pilon\": {\"no_pilon\": \"false\", \"min_polish_size\": \"1000\"}, \"rotation\": {\"no_rotate\": \"false\", \"start_genes\": {\"__class__\": \"RuntimeValue\"}, \"start_gene_id\": \"90.0\", \"start_gene_cov\": \"95.0\"}, \"spades\": {\"no_correct\": \"false\", \"min_kmer_frac\": \"0.2\", \"max_kmer_frac\": \"0.95\", \"kmers\": \"\", \"kmer_count\": \"10\", \"depth_filter\": \"0.25\", \"largest_component\": \"false\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": null,
+            "type": "tool",
+            "uuid": "d6f514e8-92db-4676-bd70-64732b9feada",
+            "workflow_outputs": [
+                {
+                    "label": "Create assemblies with Unicycler on input dataset(s): Spades Graph",
+                    "output_name": "best_spades_graph",
+                    "uuid": "f62e0822-22ce-4814-a433-14f2f8122c7b"
+                },
+                {
+                    "label": "Create assemblies with Unicycler on input dataset(s): Final Assembly Graph",
+                    "output_name": "assembly_graph",
+                    "uuid": "b0301478-67a0-4f0e-a2cd-880d438648fa"
+                },
+                {
+                    "label": "Create assemblies with Unicycler on input dataset(s): Final Assembly",
+                    "output_name": "assembly",
+                    "uuid": "aca6278a-932b-4e29-9a54-86f68c64ccd8"
+                }
+            ]
+        },
+        "5": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2",
+            "errors": null,
+            "id": 5,
+            "input_connections": {
+                "fastq_input|fastq_input1": {
+                    "id": 1,
+                    "output_name": "output"
+                },
+                "fastq_input|fastq_input2": {
+                    "id": 2,
+                    "output_name": "output"
+                },
+                "reference_source|ref_file": {
+                    "id": 4,
+                    "output_name": "assembly"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Map with BWA-MEM",
+                    "name": "fastq_input"
+                },
+                {
+                    "description": "runtime parameter for tool Map with BWA-MEM",
+                    "name": "fastq_input"
+                },
+                {
+                    "description": "runtime parameter for tool Map with BWA-MEM",
+                    "name": "reference_source"
+                }
+            ],
+            "label": null,
+            "name": "Map with BWA-MEM",
+            "outputs": [
+                {
+                    "name": "bam_output",
+                    "type": "bam"
+                }
+            ],
+            "position": {
+                "bottom": 421.3999938964844,
+                "height": 276.3999938964844,
+                "left": 979,
+                "right": 1179,
+                "top": 145,
+                "width": 200,
+                "x": 979,
+                "y": 145
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2",
+            "tool_shed_repository": {
+                "changeset_revision": "64f11cf59c6e",
+                "name": "bwa",
+                "owner": "devteam",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"analysis_type\": {\"analysis_type_selector\": \"illumina\", \"__current_case__\": 0}, \"fastq_input\": {\"fastq_input_selector\": \"paired\", \"__current_case__\": 0, \"fastq_input1\": {\"__class__\": \"RuntimeValue\"}, \"fastq_input2\": {\"__class__\": \"RuntimeValue\"}, \"iset_stats\": \"\"}, \"output_sort\": \"coordinate\", \"reference_source\": {\"reference_source_selector\": \"history\", \"__current_case__\": 1, \"ref_file\": {\"__class__\": \"RuntimeValue\"}, \"index_a\": \"auto\"}, \"rg\": {\"rg_selector\": \"do_not_set\", \"__current_case__\": 3}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": null,
+            "type": "tool",
+            "uuid": "f7f2db3e-1e51-434e-8d7b-6df21291ff4d",
+            "workflow_outputs": [
+                {
+                    "label": "Map with BWA-MEM on input dataset(s) (mapped reads in BAM format)",
+                    "output_name": "bam_output",
+                    "uuid": "5b8df412-97fd-4ca7-bbf8-c9daf0caee61"
+                }
+            ]
+        },
+        "6": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_compute_length/fasta_compute_length/1.0.3",
+            "errors": null,
+            "id": 6,
+            "input_connections": {
+                "ref|input": {
+                    "id": 4,
+                    "output_name": "assembly"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Compute sequence length",
+                    "name": "ref"
+                }
+            ],
+            "label": null,
+            "name": "Compute sequence length",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "bottom": 585,
+                "height": 134,
+                "left": 982,
+                "right": 1182,
+                "top": 451,
+                "width": 200,
+                "x": 982,
+                "y": 451
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_compute_length/fasta_compute_length/1.0.3",
+            "tool_shed_repository": {
+                "changeset_revision": "7d37cfda8e00",
+                "name": "fasta_compute_length",
+                "owner": "devteam",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"ref\": {\"ref_source\": \"history\", \"__current_case__\": 0, \"input\": {\"__class__\": \"RuntimeValue\"}, \"keep_first\": \"0\", \"keep_first_word\": \"false\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": null,
+            "type": "tool",
+            "uuid": "ec401935-5a5c-4c22-afc1-1e96480cb019",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "95dcca91-acfc-45c3-8f69-9ed14db1cd84"
+                }
+            ]
+        },
+        "7": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.2.2+galaxy0",
+            "errors": null,
+            "id": 7,
+            "input_connections": {
+                "input": {
+                    "id": 4,
+                    "output_name": "assembly"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Busco",
+                    "name": "input"
+                }
+            ],
+            "label": null,
+            "name": "Busco",
+            "outputs": [
+                {
+                    "name": "busco_sum",
+                    "type": "txt"
+                },
+                {
+                    "name": "busco_table",
+                    "type": "tabular"
+                },
+                {
+                    "name": "busco_missing",
+                    "type": "tabular"
+                },
+                {
+                    "name": "summary_image",
+                    "type": "png"
+                }
+            ],
+            "position": {
+                "bottom": 979.6000061035156,
+                "height": 347.6000061035156,
+                "left": 970,
+                "right": 1170,
+                "top": 632,
+                "width": 200,
+                "x": 970,
+                "y": 632
+            },
+            "post_job_actions": {
+                "HideDatasetActionbusco_missing": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "busco_missing"
+                },
+                "HideDatasetActionbusco_sum": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "busco_sum"
+                },
+                "HideDatasetActionsummary_image": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "summary_image"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.2.2+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "0d243f458b53",
+                "name": "busco",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"adv\": {\"evalue\": \"0.001\", \"limit\": \"3\", \"auto_lineage\": null, \"outputs\": [\"short_summary\", \"missing\", \"image\"]}, \"busco_mode\": {\"mode\": \"geno\", \"__current_case__\": 0, \"use_augustus\": {\"use_augustus_selector\": \"no\", \"__current_case__\": 0}}, \"input\": {\"__class__\": \"RuntimeValue\"}, \"lineage_dataset\": \"bacillales_odb10\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": null,
+            "type": "tool",
+            "uuid": "90ee9b97-1ff0-4f96-8d3c-c80f8c0e8bc1",
+            "workflow_outputs": [
+                {
+                    "label": "Busco on input dataset(s): full table",
+                    "output_name": "busco_table",
+                    "uuid": "61b3fcce-14e8-4a89-9522-9a71bc61d421"
+                }
+            ]
+        },
+        "8": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.2+galaxy2",
+            "errors": null,
+            "id": 8,
+            "input_connections": {
+                "input": {
+                    "id": 5,
+                    "output_name": "bam_output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Samtools stats",
+                    "name": "input"
+                }
+            ],
+            "label": null,
+            "name": "Samtools stats",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "bottom": 500.6000061035156,
+                "height": 113.60000610351562,
+                "left": 1279,
+                "right": 1479,
+                "top": 387,
+                "width": 200,
+                "x": 1279,
+                "y": 387
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.2+galaxy2",
+            "tool_shed_repository": {
+                "changeset_revision": "145f6d74ff5e",
+                "name": "samtools_stats",
+                "owner": "devteam",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"addref_cond\": {\"addref_select\": \"no\", \"__current_case__\": 0}, \"cond_region\": {\"select_region\": \"no\", \"__current_case__\": 0}, \"cov_threshold\": null, \"coverage_cond\": {\"coverage_select\": \"no\", \"__current_case__\": 0}, \"filter_by_flags\": {\"filter_flags\": \"nofilter\", \"__current_case__\": 1}, \"gc_depth\": null, \"input\": {\"__class__\": \"RuntimeValue\"}, \"insert_size\": null, \"most_inserts\": null, \"read_length\": null, \"remove_dups\": \"false\", \"remove_overlaps\": \"false\", \"sparse\": \"false\", \"split_output_cond\": {\"split_output_selector\": \"no\", \"__current_case__\": 0}, \"trim_quality\": null, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": null,
+            "type": "tool",
+            "uuid": "38d05c18-377a-495d-9912-e3328366ff56",
+            "workflow_outputs": [
+                {
+                    "label": "Samtools stats on input dataset(s)",
+                    "output_name": "output",
+                    "uuid": "9fed6ed4-c1e9-4311-8293-04f232a7c550"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "4094fd5e-be1e-43c9-82c1-baa54a68904e",
+    "version": 1
+}
