@@ -2,7 +2,7 @@
   
 # Galaxy workflow to avoid inter-plasmidic repeat collapse and false gene loss in Unicycler's hybrid assemblies
 
-*The workflow published here accompanied the publication by Schäfer et al. (submitted).  
+*The workflow published here accompanies the publication by Schäfer et al. (submitted).  
 The publication will be linked here as soon as it is published.*
 
 ## Introduction
