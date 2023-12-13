@@ -34,6 +34,10 @@ The workflow of this repository established for deciphering bacterial genomes co
 
 This workflow aims to provide a comprehensive and accurate assembly of bacterial genomes, addressing challenges related to repetitive regions and ensuring the completeness of plasmid sequences. It emphasizes the importance of careful manual curation to overcome potential issues during the assembly process.
 
+**Unicycler** is a key component of the provided Galaxy workflows and is responsible for the hybrid assembly of the sequenced bacterial genome. It integrates both short-read (Illumina) and long-read (Nanopore) sequencing data to reconstruct the whole bacterial genomes (chromosome and plasmids). Unicycler is used to create an initial assembly graph, but it can face challenges in resolving complex regions, especially large repetitive regions located on different plasmids, referred to as "inter-plasmidic repeats." While Unicycler is effective in resolving many repeats through the combination of short and long read data, it can encounter difficulties when dealing with inter-plasmidic repeats. In such cases, additional manual editing and curation are required to complete the genome assembly. Manual correction of contig multiplicities and adjustments to the assembly process are often necessary to prevent algorithmic collapses of repeat sequences and ensure the accuracy and completeness of the genomes.  
+
+A detailed description of how to curate and adjust multiplicities is descriped in the publication of Schäfer et al. (submitted).
+
 ### Galaxy workflow files
 There are two files available that are required to run the workflow. The files are in Galaxy workflow format and can be imported directly into Galaxy. Under the workflow tab the   
 
@@ -43,3 +47,18 @@ There are two files available that are required to run the workflow. The files a
 |Galaxy-Workflow-plasmid-collapse-unicycler-galaxy-hybrid-rerun.ga  |This is another brief description of what this file is doing dummy text.                       |
 
 Once the files have been imported into Galaxy, they can be executed. However, it should be noted that the dependencies of the Galaxy instance used may not necessarily be fulfilled. It may therefore be advisable to create the workflow yourself under Galaxy. It may be necessary to ask the admin of the Galaxy instance  to install missing tools or carry out updates. A detailes description of how the workflows works and which tools are required are mentioned in the publication at the top of this page.
+
+### Required tools
+
+| Tool                                   | Purpose                                       |
+|----------------------------------------|-----------------------------------------------|
+| Concatenate dataset tail-to-head (cat) | Adding raw read files together                |
+| FastQC                                 | Quality control (short read)                  |
+| NanoStat                               | Quality control (long read)                   |
+| Trim Galore!                           | Read quality filter and trimming (short read) |
+| NanoFilt                               | Read quality filter and trimming (long read)  |
+| Unicycler                              | Assembly                                      |
+| BUSCO                                  | Evaluation                                    |
+| Compute sequence length                | Evaluation                                    |
+| BWA-MEM                                | Evaluation                                    |
+| Samtools stats                         | Evaluation                                    |
