@@ -21,3 +21,4 @@ Galaxy is a bioinformatics platform that provides a user-friendly, web-based int
 ## About the Workflow
 Der hier präsentierte Workflow führt ein Hybrid-Assembly zur Rekonstruktion von bakteriellen 
 
+![alt text](https://github.com/wennj/plasmid-collapse-gene-loss-unicylcer-galaxy/main/?raw=true)
