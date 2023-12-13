@@ -1,5 +1,7 @@
 # Galaxy workflow to avoid inter-plasmidic repeat collapse and false gene loss in Unicycler's hybrid assemblies
 
+<img src="https://github.com/wennj/plasmid-collapse-gene-loss-unicycler-galaxy/blob/main/pcglug_logo.png" width="128"/>
+
 The workflow published here accompanied the publication by Schäfer et al. (submitted).  
 The publication will be linked here as soon as it is published.
 
@@ -20,5 +22,3 @@ Galaxy is a bioinformatics platform that provides a user-friendly, web-based int
   
 ## About the Workflow
 Der hier präsentierte Workflow führt ein Hybrid-Assembly zur Rekonstruktion von bakteriellen 
-
-![alt text](https://github.com/wennj/plasmid-collapse-gene-loss-unicylcer-galaxy/main/?raw=true)
