@@ -1,6 +1,6 @@
+<img align="right" src="https://github.com/wennj/plasmid-collapse-gene-loss-unicycler-galaxy/blob/main/pcglug_logo.png" width="128"/>  
+  
 # Galaxy workflow to avoid inter-plasmidic repeat collapse and false gene loss in Unicycler's hybrid assemblies
-
-<img src="https://github.com/wennj/plasmid-collapse-gene-loss-unicycler-galaxy/blob/main/pcglug_logo.png" width="128"/>
 
 The workflow published here accompanied the publication by Schäfer et al. (submitted).  
 The publication will be linked here as soon as it is published.
