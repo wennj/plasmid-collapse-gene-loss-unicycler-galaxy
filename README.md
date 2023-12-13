@@ -11,7 +11,7 @@ There are two main sequencing techniques commonly used to decipher bacterial gen
 Illumina and Nanopore sequencing techniques offer complementary strengths for bacterial genome analysis, with Illumina providing high accuracy and cost-effectiveness and Nanopore offering long reads for resolving complex regions. Hybrid assembly combines these benefits to produce more complete and accurate genome assemblies. However, challenges like repetitive elements and genome complexity can still complicate the assembly process, requiring careful consideration and bioinformatic analysis to achieve reliable results.
 
 ## Galaxy bioinformatic platform
-Galaxy is a bioinformatics platform that provides a user-friendly, web-based interface for performing a wide range of bioinformatic analyses. It is particularly useful for beginners in bioinformatics and lowers the barriers to entry, enabling users to perform a wide range of analyses without requiring extensive programming skills or technical expertise.  
+Galaxy provides a user-friendly, web-based interface for performing a wide range of bioinformatic analyses. It is particularly useful for beginners in bioinformatics and lowers the barriers to entry, enabling users to perform a wide range of analyses without requiring extensive programming skills or technical expertise.  
 
 + <b>User-Friendly Interface:</b> Galaxy offers an intuitive and graphical user interface (GUI) that doesn't require programming expertise. This makes it accessible to users who may not have a strong background in command-line bioinformatics.
 + <b>No Software Installation:</b> Users can access Galaxy through a web browser, eliminating the need to install and configure complex bioinformatics software packages on their local machines.
@@ -19,6 +19,27 @@ Galaxy is a bioinformatics platform that provides a user-friendly, web-based int
 + <b>Reproducibility:</b> Galaxy keeps a detailed history of all the analyses performed, making it easy for beginners to track and reproduce their work. This feature helps ensure the transparency and reproducibility of research.  
 + <b>Community and Resources:</b> Galaxy has a supportive user community and offers extensive documentation and tutorials, making it an excellent resource for beginners to learn bioinformatics concepts and techniques.  
 + <b>Workflows:</b> Galaxy's workflows feature allows users to string together a series of tools and analyses into a streamlined process. This makes it easier for beginners to follow a logical sequence of steps in their research, promoting good analytical practices.  
-  
-## About the Workflow
-Der hier präsentierte Workflow führt ein Hybrid-Assembly zur Rekonstruktion von bakteriellen 
+
+### Public Galaxy instances
+There are a number of publicly available Galaxy instances that can be found via web search. Here are two examples:
++ https://usegalaxy.org/
++ https://nanopore.usegalaxy.eu/
+
+
+## About this Galaxy workflow
+The workflow of this repository established for deciphering bacterial genomes combines the strengths of two sequencing technologies, Illumina (short-read) and Nanopore (long-read). It is divided into three main sections:  
++ **Quality Control and Preprocessing:** In this initial phase, the quality and integrity of the sequencing data are ensured. Data is filtered and checked to meet quality standards.
++ **Short-Read Assembly:** Illumina reads are used to perform a short-read assembly. This step serves as an initial assessment of the genome's quality and completeness based on assembly graph analysis and BUSCO scores.
++ **Hybrid Assembly:** The final assembly is carried out by combining both Illumina and Nanopore data. The best SPAdes graph plays a pivotal role in this process. If the genome remains incompletely resolved, further adjustments are made using tools like bandage and BLAST searches. Manual correction of multiplicities may be needed to achieve a fully resolved genome.
+
+This workflow aims to provide a comprehensive and accurate assembly of bacterial genomes, addressing challenges related to repetitive regions and ensuring the completeness of plasmid sequences. It emphasizes the importance of careful manual curation to overcome potential issues during the assembly process.
+
+### Galaxy workflow files
+There are two files available that are required to run the workflow. The files are in Galaxy workflow format and can be imported directly into Galaxy. Under the workflow tab the   
+
+|File                                                               |Description            |
+|-------------------------------------------------------------------|-----------------------|
+|Galaxy-Workflow-plasmid-collapse-unicycler-galaxy-auto-hybrid.ga   |This is a brief description of what this file is doing.|
+|Galaxy-Workflow-plasmid-collapse-unicycler-galaxy-hybrid-rerun.ga  |This is another brief description of what this file is doing dummy text.                       |
+
+Once the files have been imported into Galaxy, they can be executed. However, it should be noted that the dependencies of the Galaxy instance used may not necessarily be fulfilled. It may therefore be advisable to create the workflow yourself under Galaxy. It may be necessary to ask the admin of the Galaxy instance  to install missing tools or carry out updates. A detailes description of how the workflows works and which tools are required are mentioned in the publication at the top of this page.
