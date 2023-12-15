@@ -54,8 +54,8 @@ There are two files available that are required to run the workflow. The files a
 
 |File                                                               |Description            |
 |-------------------------------------------------------------------|-----------------------|
-|Galaxy-Workflow-plasmid-collapse-unicycler-galaxy-auto-hybrid.ga   |This is a brief description of what this file is doing.|
-|Galaxy-Workflow-plasmid-collapse-unicycler-galaxy-hybrid-rerun.ga  |This is another brief description of what this file is doing dummy text.                       |
+|Galaxy-Workflow-plasmid-collapse-unicycler-galaxy-auto-hybrid.ga   |Erste Teil, der alle Schritte umfasst, die automatisch ablaufen können - alles aus Fig 1.|
+|Galaxy-Workflow-plasmid-collapse-unicycler-galaxy-hybrid-rerun.ga  |Das ist der Teil aus dem 3 Abschnitte, der nur den Rerun mit den angepassten Multips betrifft - rund um den Unicycler.|
 
 Once the files have been imported into Galaxy, they can be executed. However, it should be noted that the dependencies of the Galaxy instance used may not necessarily be fulfilled. It may therefore be advisable to create the workflow yourself under Galaxy. It may be necessary to ask the admin of the Galaxy instance  to install missing tools or carry out updates. A detailes description of how the workflows works and which tools are required are mentioned in the publication at the top of this page.
 
