@@ -54,8 +54,8 @@ There are two files available that are required to run the workflow. The files a
 
 |File                                                               |Description            |
 |-------------------------------------------------------------------|-----------------------|
-|Galaxy-Workflow-plasmid-collapse-unicycler-galaxy-auto-hybrid.ga   |Erste Teil, der alle Schritte umfasst, die automatisch ablaufen können - alles aus Fig 1.|
-|Galaxy-Workflow-plasmid-collapse-unicycler-galaxy-hybrid-rerun.ga  |Das ist der Teil aus dem 3 Abschnitte, der nur den Rerun mit den angepassten Multips betrifft - rund um den Unicycler.|
+|Galaxy-Workflow-plasmid-collapse-unicycler-galaxy-auto-hybrid.ga   |This workflow comprises all steps (Read preprocessing, initial short read assembly and hybrid assembly) for a first intital run of the entire workflow. Basically it runs automatically all steps described in Figure 1 (Schäfer et al., submitted) except where manual curation is required.|
+|Galaxy-Workflow-plasmid-collapse-unicycler-galaxy-hybrid-rerun.ga  |This workflow focusses on the third step (hybrid assembly) only allows the recursive run on the hybrid assembly after changing multiplicities within the SPAdes graph.|
 
 Once the files have been imported into Galaxy, they can be executed. However, it should be noted that the dependencies of the Galaxy instance used may not necessarily be fulfilled. It may therefore be advisable to create the workflow yourself under Galaxy. It may be necessary to ask the admin of the Galaxy instance  to install missing tools or carry out updates. A detailes description of how the workflows works and which tools are required are mentioned in the publication at the top of this page.
 
