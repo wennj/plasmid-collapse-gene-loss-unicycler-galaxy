@@ -91,5 +91,6 @@ Once the files have been imported into Galaxy, they can be executed. However, it
 **Step 7 - Execute the Workflow:** Once you've provided the required inputs, click the "Run Workflow" or similar button to execute the workflow. Galaxy will automatically run each step in the workflow.  
 
 **Step 8 - Review Outputs:** After the workflow completes, you can review the generated outputs and visualizations. Galaxy keeps a record of the entire analysis, ensuring transparency.  
+  
 That's it! You've successfully imported a workflow into Galaxy and executed it.
 
