@@ -41,7 +41,7 @@ This workflow aims to provide a comprehensive and accurate assembly of bacterial
 To use Unicycler in Galaxy, you would typically import or select the Unicycler tool from the Galaxy toolshed, configure the tool parameters, and then execute your genome assembly analysis as part of your Galaxy workflow. This integration enhances the flexibility and convenience of Unicycler for users who prefer working within the Galaxy environment for their bioinformatics analyses. So far, it is not possible to start a re-run with the Galaxy integration that uses a modified SPAdes graph. However, work is in progress to enable this integration: https://github.com/galaxyproject/tools-iuc/pull/5656
 
 
-A detailed description of how to curate and adjust multiplicities using Unicycler and SPAdes Graph is descriped in the publication of Schäfer et al. (submitted).
+A detailed description of how to curate and adjust multiplicities using Unicycler and SPAdes Graph is descriped in the publication of Schäfer et al. (2024) [https://doi.org/10.1099/mgen.0.001173]
 
 ### Manual SPAdes Graph modification
 
